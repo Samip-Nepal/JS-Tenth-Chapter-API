@@ -1,9 +1,17 @@
+let catfacts=document.querySelector("#catfacts");
+let facts=document.querySelectorAll(".para");
+
+
+
 let url="https://cat-fact.herokuapp.com/facts";
  
 const getfacts = async ()=>{
     console.log("Getting data.....");
-    let resp=await fetch(url);
+    let resposnse=await fetch(url);
     console.log(resp);
+  let data=  await resposnse.json();
+ facts.innerText=data[0].text;
     
 };
 getfacts();
+catfacts.addEventListener("clicks",getfacts);
