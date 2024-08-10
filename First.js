@@ -1,8 +1,5 @@
 let catfacts=document.querySelector("#catfacts");
 let facts=document.querySelectorAll(".para");
-
-
-
 let url="https://cat-fact.herokuapp.com/facts";
  
 /*const getfacts = async ()=>{
